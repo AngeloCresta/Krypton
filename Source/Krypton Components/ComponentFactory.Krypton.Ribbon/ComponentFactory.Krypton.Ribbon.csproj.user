@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="ButtonSpec\ButtonSpecAppMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="ButtonSpec\ButtonSpecExpandRibbon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="ButtonSpec\ButtonSpecMdiChildClose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="ButtonSpec\ButtonSpecMdiChildFixed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="ButtonSpec\ButtonSpecMdiChildMin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="ButtonSpec\ButtonSpecMdiChildRestore.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="ButtonSpec\ButtonSpecMinimizeRibbon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls Visuals\KeyTipControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

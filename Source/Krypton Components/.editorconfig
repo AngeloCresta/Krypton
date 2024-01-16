@@ -1,0 +1,23 @@
+﻿#https://learn.microsoft.com/en-us/visualstudio/ide/reference/add-file-header?view=vs-2022
+file_header_template = \n *****************************************************************************\n \n  ModernUI Krypton Integration © QuarzTech.com 2022-2023. All rights reserved.\n	The software and associated documentation supplied hereunder are the \n  proprietary information of Angelo Cresta, Via Giuseppe Motta 55 \n  Riva S. Vitale - TI, 6826, Switzerland and are supplied subject to \n  licence terms.\n \n  Version 2.0.0.0  www.QuarzTech.com\n  \n *****************************************************************************
+
+[*.cs]
+#use: error, warning, none, suggestion
+
+# CA1416: Validate platform compatibility
+dotnet_diagnostic.CA1416.severity = none
+
+# IDE1006: (Naming rule violation)
+dotnet_diagnostic.IDE1006.severity = none
+
+# CS8600: Nullable warnings
+#dotnet_diagnostic.CS8600.severity = none
+
+# CS8602: Nullable warnings
+#dotnet_diagnostic.CS8602.severity = none
+
+# CS8618: Nullable events exiting constructor
+#dotnet_diagnostic.CS8618.severity = none
+
+# SYSLIB0014: 'WebClient.WebClient()' is obsolete
+dotnet_diagnostic.SYSLIB0014.severity = none

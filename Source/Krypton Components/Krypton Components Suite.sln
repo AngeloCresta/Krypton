@@ -1,17 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27729.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentFactory.Krypton.Docking", "ComponentFactory.Krypton.Docking\ComponentFactory.Krypton.Docking.csproj", "{E00FF125-CB44-480B-847E-7B3D27E481EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentFactory.Krypton.Docking", "ComponentFactory.Krypton.Docking\ComponentFactory.Krypton.Docking.csproj", "{E00FF125-CB44-480B-847E-7B3D27E481EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentFactory.Krypton.Navigator", "ComponentFactory.Krypton.Navigator\ComponentFactory.Krypton.Navigator.csproj", "{DC0DD714-4D19-4F31-A6D0-EA209D4F0EA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentFactory.Krypton.Navigator", "ComponentFactory.Krypton.Navigator\ComponentFactory.Krypton.Navigator.csproj", "{DC0DD714-4D19-4F31-A6D0-EA209D4F0EA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentFactory.Krypton.Ribbon", "ComponentFactory.Krypton.Ribbon\ComponentFactory.Krypton.Ribbon.csproj", "{E90FC375-453D-4FE4-9822-CE1DB85B6553}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentFactory.Krypton.Ribbon", "ComponentFactory.Krypton.Ribbon\ComponentFactory.Krypton.Ribbon.csproj", "{E90FC375-453D-4FE4-9822-CE1DB85B6553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentFactory.Krypton.Toolkit", "ComponentFactory.Krypton.Toolkit\ComponentFactory.Krypton.Toolkit.csproj", "{96ECAECC-54F8-4AA5-8591-B443C2D9565F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentFactory.Krypton.Toolkit", "ComponentFactory.Krypton.Toolkit\ComponentFactory.Krypton.Toolkit.csproj", "{96ECAECC-54F8-4AA5-8591-B443C2D9565F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentFactory.Krypton.Workspace", "ComponentFactory.Krypton.Workspace\ComponentFactory.Krypton.Workspace.csproj", "{9144BA04-155B-4B66-B85A-9A89AA93F7D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentFactory.Krypton.Workspace", "ComponentFactory.Krypton.Workspace\ComponentFactory.Krypton.Workspace.csproj", "{9144BA04-155B-4B66-B85A-9A89AA93F7D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Info", "Info", "{A4419AB0-8C75-4134-8A0D-49F49A964C9A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

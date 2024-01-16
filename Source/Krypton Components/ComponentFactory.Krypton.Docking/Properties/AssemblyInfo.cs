@@ -33,9 +33,4 @@ using System.Diagnostics;
 [assembly: CLSCompliant(true)]
 [assembly: AllowPartiallyTrustedCallers()]
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
-[assembly: Dependency("System", LoadHint.Always)]
-[assembly: Dependency("System.Drawing", LoadHint.Always)]
-[assembly: Dependency("System.Windows.Forms", LoadHint.Always)]
-[assembly: Dependency("ComponentFactory.Krypton.Toolkit", LoadHint.Always)]
-[assembly: Dependency("ComponentFactory.Krypton.Navigator", LoadHint.Always)]
-[assembly: Dependency("ComponentFactory.Krypton.Workspace", LoadHint.Always)]
+

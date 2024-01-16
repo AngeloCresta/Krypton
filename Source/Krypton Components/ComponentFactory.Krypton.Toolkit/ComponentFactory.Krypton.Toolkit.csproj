@@ -1,51 +1,56 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <OutputType>Library</OutputType>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>StrongKrypton.snk</AssemblyOriginatorKeyFile>
-    <ApplicationIcon>Krypton.ico</ApplicationIcon>
-    <DelaySign>false</DelaySign>
-    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\..\Bin\</OutputPath>
-    <BaseIntermediateOutputPath>../../../build/obj/$(AssemblyName)</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>$(BaseIntermediateOutputPath)/$(Configuration)/</IntermediateOutputPath>
-    <DocumentationFile>
-    </DocumentationFile>
-    <CodeAnalysisRules>
-    </CodeAnalysisRules>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\..\Bin\</OutputPath>
-    <BaseIntermediateOutputPath>../../../build/obj/$(AssemblyName)</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>$(BaseIntermediateOutputPath)/$(Configuration)/</IntermediateOutputPath>
-    <DocumentationFile>
-    </DocumentationFile>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <NoWarn>1701;1702;IDE0005</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
+
+	<PropertyGroup>
+		<TargetFrameworks>net481;net8.0-windows</TargetFrameworks>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<RootNamespace>ComponentFactory.Krypton.Toolkit</RootNamespace>
+		<AssemblyName>ComponentFactory.Krypton.Toolkit</AssemblyName>
+		<ApplicationIcon>Krypton.ico</ApplicationIcon>
+		<DelaySign>false</DelaySign>
+		<UseWindowsForms>true</UseWindowsForms>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<NeutralLanguage>en</NeutralLanguage>
+		<DisableImplicitNamespaceImports>true</DisableImplicitNamespaceImports>
+		<WarningLevel>0</WarningLevel>
+		<Configurations>Debug;Release</Configurations>
+
+		<!--<NoWarn>1700;1701;1702;CS0169;CS0618;CS8600;CS8601;CS8602;CS8603;CS8604;CS8605;CS8612;CS8613;CS8614;CS8619;CS8620;CS8621;CS8622;CS8625;CS8629;CS8633;CS8524;CS8509;CS8524;CS8765;CS8766;CS8767;CS8768;CS8769</NoWarn>-->
+		<NoWarn>1700;1701;1702</NoWarn>
+		<Nullable>enable</Nullable>
+		<OutputPath>..\..\..\Bin\</OutputPath>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+			<PropertyGroup>
+   <LangVersion>latest</LangVersion>
+</PropertyGroup>
+	<PropertyGroup>
+		<SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+		<NoWarn>$(NoWarn);SYSLIB0011</NoWarn>
+		<GenerateResourceWarnOnBinaryFormatterUse>false</GenerateResourceWarnOnBinaryFormatterUse>
+	</PropertyGroup>
+	<PropertyGroup>
+		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+		<EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+	</PropertyGroup>
+
+	<ItemGroup Condition=" $(targetframework.startswith('net48')) ">
+		<Reference Include="System.Design" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" (('$(TargetFramework)' == 'net6.0-windows') Or ('$(TargetFramework)' == 'net7.0-windows')) ">
+		<!--<PackageReference Include="System.Drawing.Design" />-->
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
     <Compile Update="ButtonSpec\ButtonSpecFormFixed.cs">
       <SubType>Component</SubType>
     </Compile>
